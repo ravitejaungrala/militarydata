@@ -117,10 +117,10 @@ if uploaded_file is not None:
     if st.checkbox("Show correlation matrix of Military Data"):
         corr_matrix = data.corr()
         st.write(corr_matrix)
-        fig,ax = plt.subplots()
+        #fig,ax = plt.subplots()
         #plt.figure(figsize=(10, 8))
-        sns.heatmap(corr_matrix, annot=True, cmap="coolwarm")
-        st.pyplot(fig)
+       # sns.heatmap(corr_matrix, annot=True, cmap="coolwarm")
+        #st.pyplot(fig)
     
     if st.checkbox("to modify the dataset values"):
         selected_row = st.selectbox("Select row to modify", data.index)
