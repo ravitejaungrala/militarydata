@@ -97,7 +97,7 @@ if uploaded_file is not None:
     data['ffiiina'] = np.random.randint(1, 10, size=len(data))
     data['bfillna'] = data['Reserve military'].fillna(method='bfill')
     if fill_type == "mean":
-        data.fillna(data.mean(), inplace=True)
+        data[:,1:].fillna(value = data[:,1:].mean(), inplace=True)
         st.write("Null values filled with mean values.")
         st.write(data)
     elif fill_type == "bfill":
@@ -117,10 +117,10 @@ if uploaded_file is not None:
     if st.checkbox("Show correlation matrix of Military Data"):
         corr_matrix = data.corr()
         st.write(corr_matrix)
-        
+        fig,ax = plsubplots()
         plt.figure(figsize=(10, 8))
         sns.heatmap(corr_matrix, annot=True, cmap="coolwarm")
-        st.pyplot()
+        st.pyplot(fig)
     
     if st.checkbox("to modify the dataset values"):
         selected_row = st.selectbox("Select row to modify", data.index)
