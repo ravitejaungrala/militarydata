@@ -13,7 +13,7 @@ logo = Image.open('logo.png')
 st.set_page_config(page_title="MILITARY DATA EDA", page_icon=":bar_chart:", layout="wide")
 st.image(logo)
 # Define the list of names
-names = ["21A21A6159-U.N.V RAVITEJA", "21A21A6106-B.MANIKANTA", "21A21A6105-B.VINAY BHASKAR","21A21A6150-R.POOJA SRI","22A21A6106-V.SAI GANESH","21A21A6153-SK.N.KHASIM","21A21A6117-J.VENKATA LAKSHMI","21A21A6109-D.PREM KUMAR"]
+names = ["U.N.V RAVITEJA", "B.MANIKANTA", "B.VINAY BHASKAR","R.POOJA SRI","V.SAI GANESH","SK.N.KHASIM","J.VENKATA LAKSHMI","-D.PREM KUMAR"]
 st.title("EXPLORATORY DATA ANALYSIS ON MILITARY DATASET")
 # Add the names to the sidebar
 st.sidebar.title("Project Team Members:")
